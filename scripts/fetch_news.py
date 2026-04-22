@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 from bs4 import BeautifulSoup
 
 # 多个 Server酱 Key（用逗号分隔）
-SERVERCHAN_KEYS = os.environ.get('SERVERCHAN_KEY', xuelian_key'').split(',')
+SERVERCHAN_KEYS = os.environ.get('SERVERCHAN_KEY','XUELIAN_KEY').split(',')
 SERVERCHAN_KEYS = [k.strip() for k in SERVERCHAN_KEYS if k.strip()]
 
 def get_weather():
