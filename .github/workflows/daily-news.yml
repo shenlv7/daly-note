@@ -2,7 +2,7 @@ name: 每日财经新闻推送
 
 on:
   schedule:
-    - cron: '0 23 *'  # 北京时间 7:00
+    - cron: " 0 23 * "  # 北京时间 7:00
   workflow_dispatch:
 
 jobs:
