@@ -1,0 +1,21 @@
+name: 每日财经新闻推送
+
+on:
+  schedule:
+    - cron: '0 23 *'  # 北京时间 7:00
+  workflow_dispatch:
+
+jobs:
+  push-news:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    - run: pip install requests beautifulsoup4
+    - name: 运行脚本
+      env:
+        SERVERCHAN_KEY: ${{ secrets.SERVERCHAN_KEY }}
+      run: |
+        python scripts/fetch_news.py
