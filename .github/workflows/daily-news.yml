@@ -17,4 +17,4 @@ jobs:
       - run: python scripts/fetch_news.py
         env:
           SERVERCHAN_KEY: ${{ secrets.SERVERCHAN_KEY }}
-          XUELIAN_KEY: ${{ secrets.XUELIAN_KEY }}
+         
